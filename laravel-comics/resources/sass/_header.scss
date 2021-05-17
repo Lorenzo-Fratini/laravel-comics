@@ -1,0 +1,132 @@
+header {
+    width: 100%;
+
+    div.header-top {
+        width: 100%;
+        padding: 5px 15%;
+        background-color: $pageBlue;
+        color: #fff;
+        font-size: 0.7rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        ul {
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            
+            li {
+                margin-left: 50px;
+
+                a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    nav {
+        width: 100%;
+        height: 100px;
+        padding: 10px 15%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+
+            img {
+                width: 60px;
+            }
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            li {
+                line-height: 100px;
+                padding: 0 10px;
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                font-weight: bold;
+                border-bottom: 4px solid transparent;
+
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    text-decoration: none;
+                    color: #222;
+                }
+
+                i {
+                    color: $pageBlue;
+                    margin-left: 2px;
+                }
+            }
+
+            li.active {
+                border-bottom: 4px solid $pageBlue;
+
+                a {
+                    color: $pageBlue
+                }
+            }
+
+
+        }
+
+        .input-cont {
+            display: flex;
+            align-items: center;
+            padding: 0 2px;
+            border-bottom: 3px solid $pageBlue;
+
+            i {
+                color: #222;
+            }
+
+            input {
+                border: none;
+                padding: 5px;
+            }
+
+            input:focus{
+                outline: none;
+            }
+
+            ::-webkit-input-placeholder {
+                text-align: right;
+                font-size: 0.8rem;
+                font-weight: bold;
+                color: #000;
+            }
+
+            :-moz-placeholder { /* Firefox 18- */
+                text-align: right;
+                font-size: 0.8rem;
+                font-weight: bold;
+                color: #000; 
+            }
+             
+             ::-moz-placeholder {  /* Firefox 19+ */
+                text-align: right;
+                font-size: 0.8rem;
+                font-weight: bold;
+                color: #000;  
+            }
+             
+             :-ms-input-placeholder {  
+                text-align: right;
+                font-size: 0.8rem;
+                font-weight: bold;
+                color: #000; 
+            }
+        }
+    }
+}
