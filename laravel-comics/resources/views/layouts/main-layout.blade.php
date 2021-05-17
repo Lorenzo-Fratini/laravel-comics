@@ -16,8 +16,6 @@
     
     @include('components.header')
 
-    {{-- <img src="{{ asset('/storage/assets/jumbotron.jpg') }}" alt="jumbotron"> --}}
-
     @yield('content')
 
     @include('components.footer')

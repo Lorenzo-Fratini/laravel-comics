@@ -258,6 +258,60 @@ class myController extends Controller
             ],
         ];
 
-        return view('pages.home', compact('nav', 'data', 'separator'));
+        $footer = [
+            [
+                'title' => 'dc comics',
+                'list' => [
+                    'Characters',
+                    'Comics',
+                    'Movies',
+                    'TV',
+                    'Games',
+                    'Videos',
+                    'News'
+                ]
+            ],
+            [
+                'title' => 'shop',
+                'list' => [
+                    'Shop DC',
+                    'Shop DC Collectibles'
+                ]
+            ],
+            [
+                'title' => 'dc',
+                'list' => [
+                    'Term Of Use',
+                    'Privacy policy (new)',
+                    'Ad Choices',
+                    'Subscriptions',
+                    'Talent Workshops',
+                    'CPSC Certificates',
+                    'Ratings',
+                    'Shop Help',
+                    'Contact Us'
+                ]
+            ],
+            [
+                'title' => 'sites',
+                'list' => [
+                    'DC',
+                    'MAD Magazine',
+                    'DC Kids',
+                    'DC Universe',
+                    'DC Power Visa'
+                ]
+            ]
+        ];
+
+        $icons = [
+            'footer-facebook.png',
+            'footer-twitter.png',
+            'footer-youtube.png',
+            'footer-pinterest.png',
+            'footer-periscope.png'
+        ];
+
+        return view('pages.home', compact('nav', 'data', 'separator', 'footer', 'icons'));
     }
 }

@@ -1,0 +1,121 @@
+footer {
+    width: 100%;
+
+    .footer-top {
+        width: 100%;
+        height: 315px;
+        padding: 20px 15%;
+        position: relative;
+        background-image: url('/storage/assets/footer-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .list-cont {
+            max-width: 380px;
+            max-height: 250px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            .list-item {
+                max-width: max-content;
+                max-height: max-content;
+                margin-right: 20px;
+
+                h2 {
+                    font-size: 1rem;
+                    margin: 10px 0;
+                    color: #fff;
+                    text-transform: uppercase;
+                }
+    
+                ul {
+                    
+                    li {
+    
+                        a {
+                            font-size: 0.7rem;
+                            color: #888;
+                        }
+
+                        a:hover {
+                            color: $pageBlue;
+                        }
+                    }
+                }
+            }
+        }
+
+        .copy {
+            margin: 20px 0;
+            font-size: 0.7rem;
+            color: #888;
+
+            a {
+                color: $pageBlue;
+            }
+        }
+
+        .logo-cont {
+            width: 480px;
+            height: 315px;
+            position: absolute;
+            top: 0;
+            right: 15%;
+            background-image: url('/storage/assets/dc-logo-bg.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    .footer-bottom {
+        width: 100%;
+        padding: 30px 15%;
+        background-color: #303030;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a.button {
+            display: block;
+            padding: 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: #fff;
+            border: 2px solid $pageBlue;
+            text-transform: uppercase;
+        }
+
+        .social {
+            display: flex;
+            align-items: center;
+            
+            span {
+                margin-right: 20px;
+                color: $pageBlue;
+                font-size: 1.1rem;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+
+                li {
+                    margin: 0 10px; 
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+
+                        img {
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

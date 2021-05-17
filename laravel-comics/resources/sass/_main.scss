@@ -77,14 +77,13 @@ main {
         font-size: 0.8rem;
 
         ul {
-            width: max-content;
-            margin: 0 auto;
+            width: 100%;
             display: flex;
+            justify-content: center;
             align-items: center;
             flex-wrap: wrap;
 
             li {
-                min-width: 180px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
