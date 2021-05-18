@@ -14,7 +14,7 @@
         </ul>
     </div>
     <nav>
-        <a href="#">
+        <a href="{{ route('home') }}">
             <img src="{{ asset('/storage/assets/dc-logo.png') }}" alt="logo">
         </a>
         <ul>
@@ -45,4 +45,5 @@
             <i class="fas fa-search"></i>
         </div>
     </nav>
+    <div class="jumbotron"></div>
 </header>

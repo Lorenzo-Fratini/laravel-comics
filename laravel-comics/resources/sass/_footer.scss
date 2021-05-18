@@ -16,6 +16,8 @@ footer {
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
+            position: relative;
+            z-index: 100;
 
             .list-item {
                 max-width: max-content;
@@ -39,7 +41,7 @@ footer {
                         }
 
                         a:hover {
-                            color: $pageBlue;
+                            color: #fff;
                         }
                     }
                 }

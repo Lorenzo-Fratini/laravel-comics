@@ -146,12 +146,7 @@ body header nav .input-cont :-ms-input-placeholder {
   color: #000;
 }
 
-body main {
-  width: 100%;
-  background-color: #1c1c1c;
-}
-
-body main .jumbotron {
+body header .jumbotron {
   width: 100%;
   height: 320px;
   background-image: url("/storage/assets/jumbotron.jpg");
@@ -159,9 +154,14 @@ body main .jumbotron {
   background-size: cover;
 }
 
+body main {
+  width: 100%;
+}
+
 body main .comics-cont {
   width: 100%;
-  padding: 50px 15% 0 15%;
+  padding: 50px 15% 10px 15%;
+  background-color: #1c1c1c;
   position: relative;
 }
 
@@ -186,29 +186,32 @@ body main .comics-cont .comics {
   flex-wrap: wrap;
 }
 
-body main .comics-cont .comics .comic {
-  max-width: 150px;
+body main .comics-cont .comics a {
   margin: 10px;
 }
 
-body main .comics-cont .comics .comic .img-cont {
+body main .comics-cont .comics a .comic {
+  max-width: 150px;
+}
+
+body main .comics-cont .comics a .comic .img-cont {
   max-width: 100%;
   max-height: 150px;
   overflow: hidden;
 }
 
-body main .comics-cont .comics .comic .img-cont img {
+body main .comics-cont .comics a .comic .img-cont img {
   width: 100%;
 }
 
-body main .comics-cont .comics .comic p {
+body main .comics-cont .comics a .comic p {
   margin: 10px 0;
   font-size: 0.7rem;
   text-transform: uppercase;
   color: #fff;
 }
 
-body main .comics-cont a {
+body main .comics-cont a.button {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -227,6 +230,7 @@ body main .separator {
   color: #fff;
   padding: 30px 0;
   font-size: 0.8rem;
+  position: relative;
 }
 
 body main .separator ul {
@@ -251,6 +255,119 @@ body main .separator ul li img {
   margin-right: 10px;
 }
 
+body main .separator div.cover {
+  position: absolute;
+  bottom: 20px;
+  left: 20%;
+}
+
+body main .separator div.cover img {
+  width: 150px;
+  border: 2px solid #fff;
+}
+
+body main .comic-details-cont {
+  width: 100%;
+  padding: 50px 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body main .comic-details-cont .details-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+body main .comic-details-cont .details-wrapper .comic-details {
+  text-align: left;
+}
+
+body main .comic-details-cont .details-wrapper .comic-details h2 {
+  text-transform: uppercase;
+}
+
+body main .comic-details-cont .details-wrapper .comic-details .green-bar-wrapper {
+  display: flex;
+}
+
+body main .comic-details-cont .details-wrapper .comic-details .green-bar-wrapper .green-bar-left,
+body main .comic-details-cont .details-wrapper .comic-details .green-bar-wrapper .green-bar-right {
+  padding: 15px 10px;
+  margin: 10px 0;
+  background-color: #55ba59;
+  border-bottom: 1px solid #28572a;
+}
+
+body main .comic-details-cont .details-wrapper .comic-details .green-bar-wrapper .green-bar-left span,
+body main .comic-details-cont .details-wrapper .comic-details .green-bar-wrapper .green-bar-right span {
+  color: #fff;
+}
+
+body main .comic-details-cont .details-wrapper .comic-details .green-bar-wrapper .green-bar-left {
+  width: 75%;
+  color: #b3f689;
+}
+
+body main .comic-details-cont .details-wrapper .comic-details .green-bar-wrapper .green-bar-right {
+  width: 25%;
+  text-align: center;
+  border-left: 1px solid #28572a;
+  color: #fff;
+  cursor: pointer;
+}
+
+body main .comic-details-cont .details-wrapper .comic-details p {
+  font-size: 0.8rem;
+  line-height: 2;
+}
+
+body main .comic-details-cont .details-wrapper .adv {
+  text-align: right;
+  margin-left: 50px;
+}
+
+body main .comic-details-cont .details-wrapper .adv img {
+  width: 250px;
+}
+
+body main .info-list {
+  width: 100%;
+  padding: 50px 20%;
+  background-color: #f6f6f6;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+
+body main .info-list ul {
+  width: 45%;
+}
+
+body main .info-list ul li {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+body main .info-list ul li h2 {
+  margin: 0 0 20px 0;
+}
+
+body main .info-list ul li .lists {
+  width: 60%;
+}
+
+body main .info-list ul li .lists a {
+  font-size: 0.8rem;
+  color: #0282f9;
+}
+
+body main .info-list ul li .lists a.uppercase {
+  text-transform: uppercase;
+}
+
 body footer {
   width: 100%;
 }
@@ -271,6 +388,8 @@ body footer .footer-top .list-cont {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 100;
 }
 
 body footer .footer-top .list-cont .list-item {
@@ -296,7 +415,7 @@ body footer .footer-top .list-cont .list-item ul li a {
 }
 
 body footer .footer-top .list-cont .list-item ul li a:hover {
-  color: #0282f9;
+  color: #fff;
 }
 
 body footer .footer-top .copy {
