@@ -5,6 +5,8 @@
         <div class="separator">
             <div class="cover">
                 <img src="{{ $elem['thumb']}}">
+                <div class="label-top">comic book</div>
+                <div class="label-bottom">view gallery</div>
             </div>
         </div>
         <div class="comic-details-cont">
@@ -15,7 +17,12 @@
                     </h2>
                     <div class="green-bar-wrapper">
                         <div class="green-bar-left">
-                            U.S. price: <span>{{ $elem['price'] }}</span> 
+                            <div>
+                                U.S. price: <span>{{ $elem['price'] }}</span>
+                            </div>
+                            <div>
+                                AVAILABLE
+                            </div>
                         </div>
                         <div class="green-bar-right">
                             Check viability <i class="fas fa-caret-down"></i>
@@ -26,7 +33,7 @@
                     </p>
                 </div>
                 <div class="adv">
-                    <figcaption>ADV</figcaption>
+                    <figcaption>ADVERTISEMENT</figcaption>
                     <img src="{{ asset('/storage/assets/adv.jpg') }}">
                 </div>
             </div>
@@ -43,7 +50,9 @@
                             <a href="#">
                                 {{ $e }}
                             </a>
-                            , 
+                            @if(!($loop->last))
+                                ,
+                            @endif
                         @endforeach
                     </div>
                 </li>
@@ -54,7 +63,9 @@
                             <a href="#">
                                 {{ $e }}
                             </a>
-                            , 
+                            @if(!($loop->last))
+                                ,
+                            @endif
                         @endforeach
                     </div>
                 </li>
@@ -82,7 +93,7 @@
                 <li>
                     On Sale Date:
                     <div class="lists">
-                        {{ $elem['sale_date'] }}
+                        {{ date('M d Y', strtotime($elem['sale_date'])) }}
                     </div>
                 </li>
             </ul>
